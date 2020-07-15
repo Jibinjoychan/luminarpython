@@ -1,0 +1,4 @@
+100,jibin,23,developer,2,10000
+101,jomin,22,sales,3,10000
+102,appu,20,testing,1,10000
+103,kelvin,24,manager,4,10000
