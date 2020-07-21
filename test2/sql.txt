@@ -1,0 +1,3 @@
+LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\empl.csv' INTO TABLE empl FIELDS TERMINATED BY ',' ENCLOSED BY '"'LINES TERMINATED BY '\n';
+
+select desig,count(*) from empl group by desig;
