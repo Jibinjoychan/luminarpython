@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>orderdetails</h1>
+{{item.mobile_name}}
+{{item.brand}}
+{{item.ram}}
+{{item.price}}
+{{item.camera}}
+{{item.os}}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="update">
+
+</form>
+<!--<table>
+    <tr>
+        <td>{{order.personname}}</td></tr>
+    <tr> <td>{{order.address}}</td></tr>
+    <tr> <td>{{order.pin}}</td></tr>
+    <tr> <td>{{order.phone}}</td></tr>
+    <tr> <td>{{order.email}}</td></tr>
+    <tr> <td>{{order.productid}}</td></tr>
+       <tr> <td>{{order.status}}</td>
+
+    </tr>
+
+</table>-->
+
+</body>
+</html>

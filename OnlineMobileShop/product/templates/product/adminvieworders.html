@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+{% extends "product/adminhome.html" %}
+
+{% block body_block %}
+<h1>orders</h1>
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>personname</td>
+            <td>phone</td>
+            <td>email</td>
+        </tr>
+        {% for order in qs %}
+        <tr>
+            <td>{{order.personname}}</td>
+            <td>{{order.phone}}</td>
+            <td>{{order.email}}</td>
+            <td><a href="{%url 'orderDetails' order.id %}">viewThisOrder</a> </td>
+            <td><a href="{%url 'cancelOrder' order.id %}" class="btn btn-danger">CancelOrder</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

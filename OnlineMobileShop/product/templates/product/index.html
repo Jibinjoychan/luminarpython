@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{% extends "product/base.html" %}
+
+{% block body_block %}
+
+<div class="container">
+    <div class="row">
+    <div class="col-6">
+        <form method="post">
+            {% csrf_token %}
+            {{search.as_p}}
+            <input type="submit" value="search">
+        </form>
+    </div>
+    <div class="col-6"></div>
+</div>
+<div class="row">
+     {% for mobile in mobiles %}
+<div class="col-lg-4">
+    <div class="card" style="width: 18rem;">
+  <img src="{{mobile.image.url}}" class="card-img-top" alt="..." height="400px" width="60px">
+  <div class="card-body">
+      name:{{mobile.mobile_name}}<br>
+      brand:{{mobile.brand}}<br>
+      price:{{mobile.price}}<br>
+      <a href="{%url 'mobileView' mobile.id %}" class="btn btn-success">BuyNow</a>
+
+
+</div>
+    </div>
+    </div>
+    {% endfor %}
+    </div>
+
+
+        {% endblock %}
+
+
+
